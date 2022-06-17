@@ -1,0 +1,1 @@
+Mycl_CR2,Mycl_GFP_downsam0.05,R1.fastq,R2.fastq,none

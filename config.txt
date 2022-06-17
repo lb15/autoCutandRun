@@ -1,0 +1,15 @@
+# Homer Configuration File (automatically generated)
+#
+# This file is updated from the Homer website and contains information about data available for
+# use with the program.
+#
+# Each section has the same format, which is <tab> separated values specifying:
+# package name <tab> version <tab> description <tab> url <tab> optional parameters (, separated)
+#
+SOFTWARE
+ORGANISMS
+mouse	v6.3	Mus musculus (mouse) accession and ontology information	http://homer.ucsd.edu/homer/data/organisms/mouse.v6.3.zip	data/accession/	10090,NCBI Gene
+PROMOTERS
+GENOMES
+mm10	v6.4	mouse genome and annotation for UCSC mm10	http://homer.ucsd.edu/homer/data/genomes/mm10.v6.4.zip	data/genomes/mm10/	mouse,default
+SETTINGS

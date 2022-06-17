@@ -1,0 +1,2 @@
+downsampled,Mycl_GFP_downsam0.05,R1.fastq,R2.fastq,Mycl_IgG_downsam0.05
+downsampled,Mycl_IgG_downsam0.05,R1.fastq,R2.fastq,none
