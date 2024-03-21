@@ -1,0 +1,2 @@
+MyCRExp,MySample1,S1_R1_001.fastq.gz,S1_R2_001.fastq.gz,mySampleControl
+MyCRExp,MySampleControl,S2_R1_001.fastq.gz,S2_R2_001.fastq.gz,none
