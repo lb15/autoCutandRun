@@ -30,7 +30,7 @@ The submission script submits a series of scripts to perform the following funct
 Trim FASTQs: trim.sh\
 Align to genome, mark and remove duplicates, filter reads under 120 bp: align_dup_filter.sh\
 Convert BAM files to BigWigs: bamtobigwig_RPGC.sh\
-Align to spike-in genome and create calibrated bedgraphs: align_ecoli.sh, getSpikeIn.sh and calibrate_bedgraph.sh\
+Align to spike-in genome and create calibrated bedgraphs: align_ecoli2.sh, getSpikeIn.sh and calibrate_bedgraph.sh\
 Call Peaks: macs2_peaks.sh\
 Annotate Peaks: chpskr_general.sh\
 Find Motifs: homer.sh\

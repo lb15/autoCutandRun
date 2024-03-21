@@ -10,7 +10,6 @@
 #$ -l scratch=10G
 #$ -l h_rt=06:00:00
 ##$ -m ea                           #--email when done
-##$-M Lauren.Byrnes@ucsf.edu        #--email
 
 #source /wynton/home/reiter/lb13/miniconda3/bin/activate CutRun
 
@@ -35,8 +34,6 @@ while IFS=, read project sample R1 R2 control;do
 	fastq1=$workdir/$project/"$sample"_"$R1"
 	fastq2=$workdir/$project/"$sample"_"$R2"
 	mkdir $project
-	#cp $fastq1 $project/
-	#cp $fastq2 $project/
 	qsub -N trim_"$project"_"$sample" $script_dir/trim.sh $project $sample "$fastq1" "$fastq2" $tmp
 done < $file
 
@@ -77,12 +74,8 @@ while IFS=, read project sample R1 R2 control;do
 		qsub -hold_jid "align_*" -N macs2_"$project"_"$sample" $script_dir/macs2_peaks.sh $project $sample $tmp $control
 		qsub -hold_jid macs2_"$project"_"$sample" -N chpskr_"$project"_"$sample" $script_dir/chpskr_v2.sh $project $sample $tmp $control	
 
-		#qsub -hold_jid macs2_"$project"_"$sample" -N chpskr_"$project"_"$sample" $script_dir/chpskr.sh $project $sample $tmp
-		#qsub -hold_jid macs2_"$project"_"$sample" -N chpskr_"$project"_"$sample"_"$control" $script_dir/chpskr.sh $project "$sample"_vs_"$control" $tmp
-		#qsub -hold_jid calibrate_"$project"_"$sample" -N seacr_"$project"_"$sample" $script_dir/seacr.sh $project $sample $tmp $control
 	else
 		>&2 echo "Running peak calling without control samples"
-		#qsub -hold_jid calibrate_"$project"_"$sample" -N seacr_"$project"_"$sample" $script_dir/seacr.sh $project $sample $tmp 
 		qsub -hold_jid align_"$project"_"$sample" -N macs2_"$project"_"$sample" $script_dir/macs2_peaks.sh $project $sample $tmp
                 qsub -hold_jid macs2_"$project"_"$sample" -N chpskr_"$project"_"$sample" $script_dir/chpskr_v2.sh $project $sample $tmp
 	fi
@@ -124,5 +117,4 @@ done < $file
 
 ################ GET METRICS AND COPY RESULTS ##################
 qsub -hold_jid "calibrate*" -N metrics $script_dir/sub_metrics.sh $file $tmp
-#qsub -hold_jid "seacr*","chpskr*" $script_dir/copy.sh $project $tmp
 
