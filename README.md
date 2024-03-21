@@ -32,6 +32,6 @@ Align to genome, mark and remove duplicates, filter reads under 120 bp: align_du
 Convert BAM files to BigWigs: bamtobigwig_RPGC.sh\
 Align to spike-in genome and create calibrated bedgraphs: align_ecoli2.sh, getSpikeIn.sh and calibrate_bedgraph.sh\
 Call Peaks: macs2_peaks.sh\
-Annotate Peaks: chpskr_general.sh\
+Annotate Peaks: chpskr_v2.sh\
 Find Motifs: homer.sh\
 Get QC Metrics: sub_metrics.sh
