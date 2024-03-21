@@ -26,6 +26,8 @@ An example file is provided and named example_samples.txt
 # Run the pipeline
 To run CUT&RUN pipeline, submit jobs with the submit_cutandrun.sh script, providing the path to the example_samples.txt file and the base directory where the project folder can be found.
 
+```qsub submit_cutandrun.sh /path/to/example_sample.txt /base/directory/```
+
 The submission script submits a series of scripts to perform the following functions.\
 Trim FASTQs: trim.sh\
 Align to genome, mark and remove duplicates, filter reads under 120 bp: align_dup_filter.sh\
