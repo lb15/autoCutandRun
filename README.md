@@ -4,7 +4,8 @@ The scripts utilize code from CUT&RUNtools (https://bitbucket.org/qzhudfci/cutru
 
 # Software
 Trimmomatic\
-Kseq from CUT&RUNtools\
+Kseq from CUT&RUNtools. I put in a folder at ~/tools/\
+filter_below.awk from CUT&RUNtools. Also in ~/tools/\
 Bowtie2\
 Picard\
 Samtools\
