@@ -3,14 +3,14 @@ This is an automatic pipeline built for UCSF's Wynton HPC to process CUT&RUN dat
 The scripts utilize code from CUT&RUNtools (https://bitbucket.org/qzhudfci/cutruntools/src/master/) and the CUT&TAG tutorial (https://www.protocols.io/view/cut-amp-tag-data-processing-and-analysis-tutorial-e6nvw93x7gmk/v1)
 
 # Software
-Trimmomatic\
+Trimmomatic v0.39\
 Kseq from CUT&RUNtools. I put in a folder at ~/tools/\
 filter_below.awk from CUT&RUNtools. Also in ~/tools/\
-Bowtie2\
-Picard\
-Samtools\
-MACS2\
-ChipSeeker\
+Bowtie2 2.4.2\
+Picard 2.24.0\
+Samtools 1.10\
+MACS2 2.1.2\
+ChipSeeker 1.34.1\
 Homer
 
 # Inputs
